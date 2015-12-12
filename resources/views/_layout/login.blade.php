@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="themes/img/unlam.png">
 
-    <title>Tracer Study :: Fakultas Teknik</title>
+    <title>a-k</title>
 	
 	<link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
 
