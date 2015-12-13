@@ -29,18 +29,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		<h1>Restricted Area</h1>
 		<p>Anda tidak bisa mengakses halaman ini!<br>
-			<span>Back to login menu</span></p>
+			Klik <a href="{{ route('home')}}" class="btn btn-info" role="button">Home</a></p>
 			
-		<div class="icons">
-		<p>Follow us on:</p>
-		<ul>
-		<li><a href="#"><img src="{{ asset('images/img1.png')}}"></a></li>
-		<li><a href="#"><img src="{{ asset('images/img2.png')}}"></a></li>
-		<li><a href="#"><img src="{{ asset('images/img3.png')}}"></a></li>
-		<li><a href="#"><img src="{{ asset('images/img4.png')}}"></a></li>
-		<li><a href="#"><img src="{{ asset('images/img5.png')}}"></a></li>
-		</ul>	
-		</div>
+
    </div>
   </div>
 </body>

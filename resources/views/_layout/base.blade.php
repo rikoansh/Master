@@ -33,7 +33,21 @@
     </div><!-- #navtop -->
 
     <div id="header" class="hidden-print">
-      @include('include/header')
+      <div class="container">
+        <div class="row hidden-xs">
+          <div class="col-md-6 header-left">
+            <div class="logougm"></div>
+            <h2>Tracer Study</h2>
+            <h3>Fakultas Teknik</h3>
+            <h3>Universitas Lambung Mangkurat</h3>
+          </div>
+          <div class="col-md-6 header-right hidden-sm">
+            &nbsp;
+      </div>
+    </div>
+
+    <div class="row navmain navbar-inverse">
+    @yield('nav')
     </div> <!-- #header -->
 
     <div id="content">
