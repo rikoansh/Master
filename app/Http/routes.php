@@ -25,9 +25,39 @@ Route::group(['as' => 'home::', 'middleware' => ['role:mahasiswa']], function ()
             ]);
 });
 
+Route::group(['as' => 'akademik::', 'middleware' => ['role:akademik']], function () {
+        Route::get('dashboardAkademik', [
+                'as' => 'homeAkademik', 'uses' => 'AkademikController@home'
+            ]);
+});
+
+Route::group(['as' => 'kemahasiswaan::', 'middleware' => ['role:kemahasiswaan']], function () {
+        Route::get('dashboardKemahasiswaan', [
+                'as' => 'homeKemahasiswaan', 'uses' => 'KemahasiswaanController@home'
+            ]);
+});
+
+Route::group(['as' => 'rektor::', 'middleware' => ['role:rektor']], function () {
+        Route::get('homeRektor', [
+                'as' => 'homeRektor', 'uses' => 'RektorController@home'
+            ]);
+});
+
+Route::group(['as' => 'dekan::', 'middleware' => ['role:dekan']], function () {
+        Route::get('homeDekan', [
+                'as' => 'homeDekan', 'uses' => 'RektorController@home'
+            ]);
+});
+
+Route::group(['as' => 'prodi::', 'middleware' => ['role:prodi']], function () {
+        Route::get('dashboardProdi', [
+                'as' => 'homeProdi', 'uses' => 'ProdiController@home'
+            ]);
+});
+
 Route::group(['as' => 'admin::', 'middleware' => ['role:admin']], function () {
 
-        Route::get('admin/utama', [
+        Route::get('admin', [
             'as' => 'tes', 'uses' => 'AdminController@tes'
         ]);
         #user

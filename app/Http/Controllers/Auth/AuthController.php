@@ -69,7 +69,7 @@ class AuthController extends Controller
     }
 
     protected function handleUserWasAuthenticated(Request $request, $throttles)
-    {
+    {8
         if ($throttles) {
             $this->clearLoginAttempts($request);
         }
@@ -78,8 +78,33 @@ class AuthController extends Controller
         }
         if (Entrust::hasRole('admin'))
         {
-            return redirect()->intended('admin/utama');
+            return redirect()->intended('admin');
         }
+        elseif (Entrust::hasRole('akademik'))
+        {
+            return redirect()->intended('akademik/home');
+        }
+
+        elseif (Entrust::hasRole('kemahasiswaan'))
+        {
+            return redirect()->intended('kemahasiswaan/home');
+        }
+
+        elseif (Entrust::hasRole('rektor'))
+        {
+            return redirect()->intended('rektor/home');
+        }
+
+        elseif (Entrust::hasRole('dekan'))
+        {
+            return redirect()->intended('dekan/home');
+        }
+
+        elseif (Entrust::hasRole('prodi'))
+        {
+            return redirect()->intended('prodi/home');
+        }
+
         else
         {
             return redirect()->intended('home');

@@ -37,6 +37,46 @@ $factory->defineAs(App\Role::class, 'mahasiswa', function (Faker\Generator $fake
     ];
 });
 
+$factory->defineAs(App\Role::class, 'akademik', function (Faker\Generator $faker) {
+    return [
+        'name' => 'akademik',
+        'display_name' => 'Akademik',
+        'description' => 'Pengguna Akademik',
+    ];
+});
+
+$factory->defineAs(App\Role::class, 'rektor', function (Faker\Generator $faker) {
+    return [
+        'name' => 'rektor',
+        'display_name' => 'Rektor',
+        'description' => 'Pengguna Rektor',
+    ];
+});
+
+$factory->defineAs(App\Role::class, 'dekan', function (Faker\Generator $faker) {
+    return [
+        'name' => 'dekan',
+        'display_name' => 'Dekan',
+        'description' => 'Pengguna Dekan',
+    ];
+});
+
+$factory->defineAs(App\Role::class, 'kemahasiswaan', function (Faker\Generator $faker) {
+    return [
+        'name' => 'kemahasiswaan',
+        'display_name' => 'Kemahasiswaan',
+        'description' => 'Pengguna Kemahasiswaan',
+    ];
+});
+
+$factory->defineAs(App\Role::class, 'prodi', function (Faker\Generator $faker) {
+    return [
+        'name' => 'prodi',
+        'display_name' => 'Prodi',
+        'description' => 'Pengguna Prodi',
+    ];
+});
+
 $factory->defineAs(App\User::class, 'admin', function (Faker\Generator $faker) {
     return [
         'username' => 'admin',
@@ -50,6 +90,46 @@ $factory->defineAs(App\User::class, 'mahasiswa', function (Faker\Generator $fake
         'username' => 'user',
         'email' => 'user@localhost.com',
         'password' => bcrypt('user'),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'akademik', function (Faker\Generator $faker) {
+    return [
+        'username' => 'akademik',
+         'email' => 'Akademik@localhost.com',
+        'password' => bcrypt('akademik'),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'rektor', function (Faker\Generator $faker) {
+    return [
+        'username' => 'rektor',
+        'email' => 'rektor@localhost.com',
+        'password' => bcrypt('rektor'),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'dekan', function (Faker\Generator $faker) {
+    return [
+        'username' => 'dekan',
+        'email' => 'Dekan@localhost.com',
+        'password' => bcrypt('dekan'),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'prodi', function (Faker\Generator $faker) {
+    return [
+        'username' => 'prodi',
+        'email' => 'prodi@localhost.com',
+        'password' => bcrypt('prodi'),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'kemahasiswaan', function (Faker\Generator $faker) {
+    return [
+        'username' => 'kemahasiswaan',
+        'email' => 'kemahasiswaan@localhost.com',
+        'password' => bcrypt('kemahasiswaan'),
     ];
 });
 

@@ -82,6 +82,12 @@ class AdminController extends Controller
 		return redirect()->route('admin::user');
 	}
 
+	public function tampilhapus_user($username)
+	{
+			$user = User::whereUsername($username)->firstOrFail();
+			return view('admin/tampildelete',compact('user'));
+	}
+	
 	public function hapus_user($username)
 	{
 		$user = User::whereUsername($username)->firstOrFail();

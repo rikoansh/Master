@@ -30,6 +30,21 @@ class DatabaseSeeder extends Seeder
         $admin->attachRole(1);
         $mahasiswa = App\User::find(2);
         $mahasiswa->attachRole(2);
+        
+        $akademik = App\User::find(3);
+        $akademik->attachRole(3);
+
+        $rektor = App\User::find(4);
+        $rektor->attachRole(4);
+
+        $dekan = App\User::find(5);
+        $dekan->attachRole(5);
+
+        $kemahasiswaan = App\User::find(6);
+        $kemahasiswaan->attachRole(6);
+
+        $prodi = App\User::find(7);
+        $prodi->attachRole(7);
 
         Model::reguard();
     }
